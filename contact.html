@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="image/IMG-20250918-WA0004.jpg" alt="RealEstatePro Logo">
+        </div>
+      
+        <!-- Hamburger Checkbox -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+          ☰
+        </label>
+      
+        <!-- Navigation -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you. Send us a message directly on WhatsApp!</p>
+      
+        <div class="contact-container">
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <form id="whatsappForm">
+              <input type="text" id="name" placeholder="Your Name" required>
+              <input type="email" id="email" placeholder="Your Email" required>
+              <textarea id="message" placeholder="Your Message" required></textarea>
+              <button type="submit">Send via WhatsApp</button>
+            </form>
+          </div>
+      
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h3>Our Office</h3>
+            <p>🏢 123 Main Street, Abuja, Nigeria</p>
+            <p>📞 +234 800 123 4567</p>
+            <p>📧 info@realestatepro.com</p>
+           
+          </div>
+        </div>
+      </section>
+      <script>
+        document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+          let name = document.getElementById("name").value;
+          let email = document.getElementById("email").value;
+          let message = document.getElementById("message").value;
+      
+          // ✅ Remove spaces from number
+          let whatsappNumber = "2348102007321"; 
+      
+          // ✅ Encode the message to handle spaces/special characters
+          let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+            "Hello, my name is " + name + ". My email is " + email + ". Message: " + message
+          )}`;
+      
+          window.open(whatsappURL, "_blank");
+        });
+      </script>
+</body></html>      
