@@ -11,7 +11,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: #004aad;
+    background: #ffcc00;
     color: white;
     position: relative;
   }
@@ -61,17 +61,26 @@ header {
     gap: 20px;
   }
   
-  .properties h2 {
-    font-size: 2rem;              /* Bigger than normal */
-  font-weight: 700;             /* Bold */
-  text-align: center;           /* Centered */
-  color: #004aad;               /* Your brand color */
-  margin-bottom: 25px;
-  position: relative;
-  display: inline-block;        /* Keeps underline short */
-  padding-bottom: 8px;
-
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
   }
+  
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #ffcc00;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+ 
   .property-card {
     background: #f8f8f8;
     border-radius: 10px;
@@ -154,7 +163,7 @@ header {
     nav ul {
         display: none;
         flex-direction: column;
-        background: #004aad;
+        background: #ffcc00;
         position: absolute;
         top: 70px;
         z-index: 999;
@@ -254,7 +263,7 @@ header {
   .agent-card h3 {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #004aad;
+    color: #ffcc00;
     margin-bottom: 8px;
   }
   
@@ -289,7 +298,7 @@ header {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 40px;
-    color: #004aad;
+    color: #ffcc00;
   }
   
   .testimonial-grid {
@@ -486,7 +495,7 @@ header {
   
   .about-text h2 {
     font-size: 2rem;
-    color: #004aad;
+    color: #ffcc00;
     margin-bottom: 15px;
   }
   
@@ -577,7 +586,7 @@ header {
     font-size: 2.2rem;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #2b6cb0;
+    color: #ffcc00;
   }
   
   .contact p {
@@ -622,9 +631,9 @@ header {
   
   .contact-form input:focus,
   .contact-form textarea:focus {
-    border-color: #2b6cb0;
+    border-color: #ffcc00;
     outline: none;
-    box-shadow: 0 0 5px rgba(43,108,176,0.4);
+    box-shadow: 0 0 5px #ffcc00;
   }
   
   .contact-form textarea {
@@ -633,7 +642,7 @@ header {
   }
   
   .contact-form button {
-    background: #2b6cb0;
+    background:#ffcc00 ;
     color: white;
     border: none;
     padding: 14px;
@@ -645,7 +654,7 @@ header {
   }
   
   .contact-form button:hover {
-    background: #1e4e7a;
+    background: #ffcc00;
     transform: translateY(-2px);
   }
   
@@ -655,7 +664,7 @@ header {
   
   .contact-info h3 {
     margin-bottom: 15px;
-    color: #2b6cb0;
+    color: #ffcc00;
   }
   
   .contact-info p {
@@ -686,3 +695,354 @@ header {
     }
   }
   
+  .shimax-build {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f1f1f1 100%);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .shimax-build h2 {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .shimax-build p {
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 850px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+  }
+  
+  .build-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  
+  .step {
+    position: relative;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .step:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0px 15px 40px rgba(0,0,0,0.12);
+  }
+  
+  .step img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .step:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* ✅ Overlay effect */
+  .step::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.5));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .step:hover::after {
+    opacity: 1;
+  }
+  
+  .step h3 {
+    margin: 15px 0 5px;
+    font-size: 1.4rem;
+    color: #222;
+    font-weight: 600;
+  }
+  
+  .step p {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* ✅ Step number badge */
+  .step h3::before {
+    content: "🏗️ ";
+    color: #d4af37; /* gold accent */
+    font-size: 1.2rem;
+  }
+  
+  /* ✅ Mobile */
+  @media (max-width: 768px) {
+    .shimax-build h2 {
+      font-size: 2rem;
+    }
+    .step img {
+      height: 180px;
+    }
+  }
+  
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.testimonials {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+  position: relative;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.testimonial-slider {
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.testimonial-card {
+  flex: 0 0 100%;
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.testimonial-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 3px solid #eed263;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.testimonial-card h3 {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.slider-controls {
+  margin-top: 15px;
+}
+
+.slider-controls button {
+  background: #ffcc00;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider-controls button:hover {
+  background: #ffcc00;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.slider-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 5px;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider-dots button.active {
+  background:#f9c802 ;
+}
+
+@media (max-width: 768px) {
+  .testimonials h2 {
+    font-size: 1.6rem;
+  }
+  .testimonial-card img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials h2 {
+    font-size: 1.4rem;
+  }
+  .testimonial-card img {
+    width: 65px;
+    height: 65px;
+  }
+  .testimonial-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Video Hero */
+.video-hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background:#ffcc00;
+}
+
+/* Background Video */
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* video is at the bottom, controls will render above it */
+  border: none;
+  outline: none;
+}
+
+/* Dark Overlay */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2;
+  pointer-events: none; /* ✅ lets you click video controls through overlay */
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #ffcc00;
+  max-width: 700px;
+  padding: 20px;
+  z-index: 3; /* always above video & overlay */
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-content span {
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* CTA Button */
+.cta-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #ffcc00;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #000;
+  color: #ffcc00;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* ✅ Media Queries */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .cta-btn {
+    padding: 10px 22px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .video-hero {
+    height: 80vh;
+  }
+  .hero-content {
+    padding: 15px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+  .cta-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
