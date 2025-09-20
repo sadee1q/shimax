@@ -164,7 +164,7 @@ header {
     nav ul {
         display: none;
         flex-direction: column;
-        background: #8B0000;
+        background: #000;
         position: absolute;
         top: 70px;
         z-index: 999;
